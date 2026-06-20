@@ -23,6 +23,21 @@ while True:
                 break
             else:
                 os.system('clear')
+                print(f"""
+                      {RED}
+
+   ███___ ___    _____  _________  ____  __.  _________      
+   ███░/   |   \  /  _  \ \_   ___ \|    |/ _| /   _____/      
+ ███░ /    ~    \/  /_\  \/    \  \/|      <   \_____  \       
+██░   \    Y    /    |    \     \___|    |  \  /        \      
+░      \___|_  /\____|__  /\______  /____|__ \/_______  /    
+           ██\/         \/    ░   \/        \/░       \/{RESET}
+
+ CODE: Nihility
+I might need a coffee break, it's 3:18 AM
+  
+
+                      """)
                 print(f"{RED}Dumbass has yet to open the trojan, waiting...{RESET}")
                 
         else:
