@@ -4,10 +4,23 @@ RED = "\033[31m"
 GREEN = "\033[32m"
 BLUE = "\033[34m"
 RESET = "\033[0m"
-os.system('cls')
+os.system('clear')
 print(f"{RED} 0-Attack {RESET}")
 time.sleep(1)
-print(f"""
+print(f"""{RED}
+
+   ███___ ___    _____  _________  ____  __.  _________      
+   ███░/   |   \  /  _  \ \_   ___ \|    |/ _| /   _____/      
+ ███░ /    ~    \/  /_\  \/    \  \/|      <   \_____  \       
+██░   \    Y    /    |    \     \___|    |  \  /        \      
+░      \___|_  /\____|__  /\______  /____|__ \/_______  /    
+           ██\/         \/    ░   \/        \/░       \/{RESET}
+
+  
+
+
+
+
 {GREEN}Multi-Tool                        Coded: Nihility
 --------------------------------------------------------
 1. DDoS Attack                        2. Web Scanner
@@ -16,8 +29,8 @@ print(f"""
 
 5. IP-Lookup                          6. Android RAT
 
-{RESET}
---------------------------------------------------------
+
+--------------------------------------------------------{RESET}
       """)
 choice = input(f"{BLUE}Choose an option: {RESET}")
 if choice == "1":
