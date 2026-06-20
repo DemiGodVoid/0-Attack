@@ -22,7 +22,7 @@ while True:
                 input("Press Enter to exit.")
                 break
             else:
-                os.systen('clear')
+                os.system('clear')
                 print(f"{RED}Dumbass has yet to open the trojan, waiting...{RESET}")
                 
         else:
