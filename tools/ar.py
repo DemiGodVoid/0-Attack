@@ -27,9 +27,11 @@ while True:
                         download_url = "http://bluntcord.medianewsonline.com/aroid_to/download.php"
                         download_response = requests.get(download_url)
                         if download_response.status_code == 200:
-                            with open(os.path.expanduser('~/Downloads/contacts.txt'), 'w') as file:
-                                file.write(download_response.text)
-                            print("File downloaded successfully to Downloads folder.")
+                            # Save directly to your Downloads folder
+                            save_path = os.path.expanduser('~/Downloads/contacts.txt')
+                            with open(save_path, 'wb') as file:
+                                file.write(download_response.content)
+                            print(f"File downloaded successfully to {save_path}")
                         else:
                             print(f"Failed to download file. Status code: {download_response.status_code}")
                     except Exception as e:
