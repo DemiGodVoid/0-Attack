@@ -29,6 +29,10 @@ while True:
                         if download_response.status_code == 200:
                             # Save directly to your Downloads folder
                             save_path = os.path.expanduser('~/Downloads/contacts.txt')
+                            save_dir = os.path.dirname(save_path)
+                            # Create the directory if it doesn't exist
+                            if not os.path.exists(save_dir):
+                                os.makedirs(save_dir)
                             with open(save_path, 'wb') as file:
                                 file.write(download_response.content)
                             print(f"File downloaded successfully to {save_path}")
